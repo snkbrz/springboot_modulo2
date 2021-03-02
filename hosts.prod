@@ -1,0 +1,3 @@
+
+[prod]
+192.168.70.26 ansible_user=root ansible_password=p@$$.102030 ansible_python_interpreter=/usr/bin/python3
