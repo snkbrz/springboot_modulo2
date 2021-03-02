@@ -1,4 +1,4 @@
-- hosts: {{DOCKER_HOST}}
+- hosts: homologacao
   tasks:
    - name: Install python pip
      apt:
