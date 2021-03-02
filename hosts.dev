@@ -1,4 +1,10 @@
-[dev]
 cliente01 192.168.70.26 ansible_user=root ansible_password=p@$$.102030 ansible_python_interpreter=/usr/bin/python3
 cliente02 192.168.70.26 ansible_user=root ansible_password=p@$$.102030 ansible_python_interpreter=/usr/bin/python3
 
+[homologacao]
+cliente01
+cliente02
+
+[producao]
+cliente01
+cliente02
