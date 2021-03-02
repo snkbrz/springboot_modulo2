@@ -10,11 +10,11 @@
       state: present
    - name: Start the container
      docker_container:
-        name: example-homolog
-        image: "192.168.70.24:5000/springboot-jenkins-example:{{DOCKER_TAG}}"
+        name: springboot_modulo2
+        image: "192.168.70.24:5000/springboot_modulo2:{{DOCKER_TAG}}"
         state: started
         pull: true
         recreate: yes
         ports:
-           - 0.0.0.0:8080:8080
+           - 0.0.0.0:8082:8080
 
