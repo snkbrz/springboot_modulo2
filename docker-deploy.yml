@@ -1,4 +1,4 @@
-- hosts: homologacao
+- hosts: all
   tasks:
    - name: Install python pip
      apt:
