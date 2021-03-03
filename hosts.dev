@@ -3,8 +3,7 @@ cliente02 ansible_host=192.168.70.26 ansible_user=root ansible_password=p@$$.102
 
 [homologacao]
 cliente01
-cliente02
+
 
 [producao]
-cliente01
 cliente02
