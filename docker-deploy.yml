@@ -1,4 +1,5 @@
 - hosts: all
+  serial: 2
   tasks:
    - name: Install python pip
      apt:
