@@ -10,7 +10,7 @@
       state: present
    - name: Start the container
      docker_container:
-        name: springboot_modulo2_homologacao
+        name: {{MODULO}}
         image: "192.168.70.24:5000/springboot-jenkins-example:{{DOCKER_TAG}}"
         state: started
         pull: true
