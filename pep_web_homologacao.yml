@@ -10,7 +10,7 @@
       state: present
    - name: Start the container
      docker_container:
-        name: "{{MODULO}}"
+        name: "{{MODULO}}_homologacao"
         image: "192.168.70.24:5000/{{MODULO}}:{{DOCKER_TAG}}"
         state: started
         pull: true
