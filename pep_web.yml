@@ -1,0 +1,20 @@
+- hosts: all
+  serial: 2
+  tasks:
+   - name: Install python pip
+     apt:
+      name: python3-pip
+      state: present
+   - name: Install docker-py
+     apt:
+      name: python3-docker
+      state: present
+   - name: Start the container
+     docker_container:
+        name: springboot_modulo2
+        image: "192.168.70.24:5000/springboot_modulo2:{{DOCKER_TAG}}"
+        state: started
+        pull: true
+        recreate: yes
+        ports:
+           - 0.0.0.0:8080:8080
