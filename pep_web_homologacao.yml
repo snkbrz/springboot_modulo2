@@ -1,0 +1,19 @@
+- hosts: dev
+  tasks:
+   - name: Install python pip
+     apt:
+      name: python3-pip
+      state: present
+   - name: Install docker-py
+     apt:
+      name: python3-docker
+      state: present
+   - name: Start the container
+     docker_container:
+        name: springboot_modulo2_homologacao
+        image: "192.168.70.24:5000/springboot-jenkins-example:{{DOCKER_TAG}}"
+        state: started
+        pull: true
+        recreate: yes
+        ports:
+           - 0.0.0.0:8080:8080
