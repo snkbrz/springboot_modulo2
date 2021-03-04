@@ -8,9 +8,15 @@
      apt:
       name: python3-docker
       state: present
-   - name: Start the container
+   - name: Removendo container "{{MODULO}}_homologacao"
      docker_container:
         name: "{{MODULO}}_homologacao"
+        image: "192.168.70.24:5000/{{MODULO}}:{{DOCKER_TAG}}"
+        state: absent
+
+   - name: Start the container "{{MODULO}}_homologacao2"
+     docker_container:
+        name: "{{MODULO}}_homologacao2"
         image: "192.168.70.24:5000/{{MODULO}}:{{DOCKER_TAG}}"
         state: started
         pull: true
